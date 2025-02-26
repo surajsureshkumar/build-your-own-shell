@@ -15,7 +15,7 @@ public class Main {
             System.out.print("$ ");
             input = scanner.nextLine();
         }
-        while(!input.matches(""));
+        while(!input.matches("")); // regex matching
         scanner.close();
 
     }
