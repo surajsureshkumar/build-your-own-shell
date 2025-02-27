@@ -16,9 +16,9 @@ public class Main {
                 break;
             }else if(input.startsWith("echo ")){
                 if (Arrays.asList(commands).contains(input.substring(5))){
-                    System.out.println(input.substring(5) + "is a shell builtin");
+                    System.out.println(input.substring(5));
                 } else{
-                    System.out.println(input.substring(5) + ": not found");
+                    System.out.println(input + ": not found");
                 }
             } else if (input.startsWith("type ")){
                 String typeSubstring = input.substring(5);
