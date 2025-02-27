@@ -1,8 +1,10 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         // Uncomment this block to pass the first stage
+        String[] commands = {"echo","type","exit"};
         System.out.print("$ ");
 
         Scanner scanner = new Scanner(System.in);
@@ -12,15 +14,19 @@ public class Main {
         do{
             if(input.equals("exit 0")){
                 break;
-            }
-            if(input.startsWith("echo ")){
-                System.out.println(input.substring(5));
-            } else{
-                System.out.println(input + ": command not found");
-            }
-
-            if(input.startsWith("type ")){
-                System.out.println(input.substring(5) + "is a shell builtin");
+            }else if(input.startsWith("echo ")){
+                if (Arrays.asList(commands).contains(input.substring(5))){
+                    System.out.println(input.substring(5) + "is a shell builtin");
+                } else{
+                    System.out.println(input.substring(5) + ": not found");
+                }
+            } else if (input.startsWith("type ")){
+                String typeSubstring = input.substring(5);
+                if (Arrays.asList(commands).contains(typeSubstring)){
+                    System.out.println(typeSubstring + "is a shell builtin");
+                } else{
+                    System.out.println(typeSubstring + ": not found");
+                }
             } else{
                 System.out.println(input + ": not found");
             }
