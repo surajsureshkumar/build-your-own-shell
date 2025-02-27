@@ -23,7 +23,7 @@ public class Main {
             } else if (input.startsWith("type ")){
                 String typeSubstring = input.substring(5);
                 if (Arrays.asList(commands).contains(typeSubstring)){
-                    System.out.println(typeSubstring + "is a shell builtin");
+                    System.out.println(typeSubstring + " is a shell builtin");
                 } else{
                     System.out.println(typeSubstring + ": not found");
                 }
