@@ -17,6 +17,10 @@ public class Main {
             System.out.println(input + ": command not found");
             System.out.print("$ ");
             input = scanner.nextLine();
+
+            if(input.startsWith("echo ")){
+                System.out.println(input);
+            }
         }
         while(!input.matches("")); // regex matching
         scanner.close();
