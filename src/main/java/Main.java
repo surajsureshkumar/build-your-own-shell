@@ -11,6 +11,7 @@ public class Main {
         String input = scanner.nextLine(); // takes the first input
 
         // so the below do while is performed till the input is empty
+        //added echo,type, exit
         do{
             if(input.equals("exit 0")){
                 break;
