@@ -15,11 +15,7 @@ public class Main {
             if(input.equals("exit 0")){
                 break;
             }else if(input.startsWith("echo ")){
-                if (Arrays.asList(commands).contains(input.substring(5))){
-                    System.out.println(input.substring(5));
-                } else{
-                    System.out.println(input + ": not found");
-                }
+                System.out.println(input.substring(5));
             } else if (input.startsWith("type ")){
                 String typeSubstring = input.substring(5);
                 if (Arrays.asList(commands).contains(typeSubstring)){
