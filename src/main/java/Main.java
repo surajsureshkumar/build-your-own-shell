@@ -19,7 +19,7 @@ public class Main {
             input = scanner.nextLine();
 
             if(input.startsWith("echo ")){
-                System.out.println(input);
+                System.out.println(input.substring(5));
             }
         }
         while(!input.matches("")); // regex matching
